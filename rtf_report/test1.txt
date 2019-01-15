@@ -1,0 +1,29 @@
+[REP:START]
+<!-- Пример формирования отчета в текстовом виде. -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Отчет</title>
+</head>
+
+<body>
+<p align="right">Дата печати: [DATE()]</p>
+<p align="center"><strong>Список субъектов РФ</strong><br></p>
+
+<table border="1" cellspacing="0" width="100%" cellpadding="5">
+  <tr>
+    <td width="10%" align="center">Код</td>
+    <td width="90%" align="center">Наименование</td>
+  </tr>
+[REP:ALI=REG]
+[REP:DETAIL]
+  <tr>
+    <td width="10%" align="right">[srf_id]</td>
+    <td width="90%" align="left">[srf_name]</td>
+  </tr>
+[REP:ENDDETAIL]
+[REP:ENDALIAS]
+</table>
+</body>
+</html>
+[REP:FINAL]
