@@ -36,7 +36,7 @@
    <NumberFormat/>
    <Protection/>
   </Style>
-  <Style ss:ID="m295025280">
+  <Style ss:ID="m305187912">
    <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -45,7 +45,7 @@
    </Borders>
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
   </Style>
-  <Style ss:ID="m295025300">
+  <Style ss:ID="m305187932">
    <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:WrapText="1"/>
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -55,7 +55,7 @@
    </Borders>
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
   </Style>
-  <Style ss:ID="m295029084">
+  <Style ss:ID="m305179860">
    <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -65,7 +65,7 @@
    </Borders>
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
   </Style>
-  <Style ss:ID="m295029104">
+  <Style ss:ID="m305179880">
    <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
    <Borders>
     <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -74,7 +74,7 @@
    </Borders>
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
   </Style>
-  <Style ss:ID="m295029124">
+  <Style ss:ID="m305179900">
    <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:WrapText="1"/>
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -302,7 +302,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">[REP:GRP=TIP]</Data></Cell>
-    <Cell ss:MergeAcross="2" ss:StyleID="m295029084"><Data ss:Type="String">Тип региона: [ICASE(tip=0,”Города”, tip=1,”Области”, tip=2,”Республики”, tip=3,”Краи”,”АО”)]</Data><NamedCell
+    <Cell ss:MergeAcross="2" ss:StyleID="m305179860"><Data ss:Type="String">Тип региона: [ICASE(tip=0,”Города”, tip=1,”Области”, tip=2,”Республики”, tip=3,”Краи”,”АО”)]</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -322,7 +322,7 @@
       ss:Name="Print_Area"/></Cell>
     <Cell ss:StyleID="s77"><Data ss:Type="String">[srf_name]</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s78"><Data ss:Type="String">[RAZ:srf_sum]</Data><NamedCell
+    <Cell ss:StyleID="s78"><Data ss:Type="String">[NUM:srf_sum]</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -336,7 +336,7 @@
       ss:Name="Print_Area"/></Cell>
     <Cell ss:StyleID="s80"><Data ss:Type="String">[srf_name]</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s81"><Data ss:Type="String">[RAZ:srf_sum]</Data><NamedCell
+    <Cell ss:StyleID="s81"><Data ss:Type="String">[NUM:srf_sum]</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -350,7 +350,7 @@
       ss:Name="Print_Area"/></Cell>
     <Cell ss:StyleID="s84"><Data ss:Type="String">[srf_name]</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s85"><Data ss:Type="String">[RAZ:srf_sum]</Data><NamedCell
+    <Cell ss:StyleID="s85"><Data ss:Type="String">[NUM:srf_sum]</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -366,14 +366,14 @@
     <Cell ss:StyleID="s87"><NamedCell ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="2" ss:MergeAcross="1" ss:StyleID="m295029104"><Data
+    <Cell ss:Index="2" ss:MergeAcross="1" ss:StyleID="m305179880"><Data
       ss:Type="String">Итого: [gr1_all] объектов по группе:</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s93"><Data ss:Type="String">[SUM:RAZ:srf_sum]</Data><NamedCell
+    <Cell ss:StyleID="s93"><Data ss:Type="String">[SUM:NUM:srf_sum]</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="2" ss:MergeAcross="2" ss:StyleID="m295029124"><ss:Data
+    <Cell ss:Index="2" ss:MergeAcross="2" ss:StyleID="m305179900"><ss:Data
       ss:Type="String" xmlns="http://www.w3.org/TR/REC-html40"><B>Сумма прописью: </B><Font>[SUM:RUB:srf_sum]</Font></ss:Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
@@ -390,14 +390,14 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s68"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="m295025280"><Data ss:Type="String">Итого: [tbl_all] объектов по таблице:</Data><NamedCell
+    <Cell ss:MergeAcross="1" ss:StyleID="m305187912"><Data ss:Type="String">Итого: [tbl_all] объектов по таблице:</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">[SUM:RAZ:srf_sum]</Data><NamedCell
+    <Cell ss:StyleID="s106"><Data ss:Type="String">[SUM:NUM:srf_sum]</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s68"/>
-    <Cell ss:MergeAcross="2" ss:StyleID="m295025300"><ss:Data ss:Type="String"
+    <Cell ss:MergeAcross="2" ss:StyleID="m305187932"><ss:Data ss:Type="String"
       xmlns="http://www.w3.org/TR/REC-html40"><B>Сумма прописью: </B><Font>[SUM:RUB:srf_sum]</Font></ss:Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
@@ -426,12 +426,12 @@
     <VerticalResolution>600</VerticalResolution>
    </Print>
    <Selected/>
-   <TopRowVisible>9</TopRowVisible>
+   <TopRowVisible>15</TopRowVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>17</ActiveRow>
-     <ActiveCol>4</ActiveCol>
+     <ActiveRow>23</ActiveRow>
+     <ActiveCol>3</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

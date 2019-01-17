@@ -202,6 +202,10 @@ PARAMETERS f_shabl, f_othet, rep_config
 *	2. [3].ADD: Добавлена функции XLS_REPORT().
 *	3. [4].ADD: Добавлена функции DBF_TOEXCEL().
 *--------------------------------------------------------------------------------------------
+* Ver 3.1 - 2019 г.
+*--------------------------------------------------------------------------------------------
+*	1. [1].IZM: Добавлена функция преобразования "NUM" - для приведения типа ячейки к числовому формату (актуально только для формирования отчетов в EXCEL).
+*--------------------------------------------------------------------------------------------
 	IF VARTYPE(m.rep_config)#"C"
 		rep_config=''
 	ENDIF
@@ -926,12 +930,11 @@ LPARAMETERS t_rnomer,t_rztype,t_alias
 						znh_now=''
 					CASE m.tmp_fend=="RAZ" OR m.tmp_fend=="BLZ"
 						znh_now=NUM_RAZDEL(m.znh_now)
+					CASE m.tmp_fend=="NUM"
+						znh_now=ALLTRIM(CHRTRAN(PADL(m.znh_now,30),".",","))
 					OTHERWISE
 						m.znh_now=PADL(m.znh_now,30)
 					ENDCASE
-					IF "[EXCEL]"$UPPER(m.rep_config)
-						m.znh_now=ALLTRIM(CHRTRAN(m.znh_now,".",","))
-					ENDIF
 				CASE VARTYPE(m.znh_now)="D"
 					m.znh_now=DTOC(m.znh_now)
 				CASE VARTYPE(m.znh_now)="T"
@@ -1668,7 +1671,7 @@ PRIVATE f_body,l_body
 			CASE LEN(m.tmp_text)=3 AND INLIST(m.tmp_text,"CON","TBL","GR1","GR2","GR3","GR4","GR5","GR6")		&& ссылка на алиас
 				tmp_alia=GET_REPALIAS("["+m.tmp_text+"]")
 				tmp_name=ALLTRIM(SUBSTR(m.tmp_name,AT(":",m.tmp_name)+1))	&& отсекаем ф-ю
-			CASE LEN(m.tmp_text)=3 AND INLIST(m.tmp_text,"HEX","RAZ","RM1","RM2","RM3","LRU","BLZ","BLK","ML5")		&& функции окончательного форматирования
+			CASE LEN(m.tmp_text)=3 AND INLIST(m.tmp_text,"HEX","RAZ","RM1","RM2","RM3","LRU","BLZ","BLK","ML5","NUM")		&& функции окончательного форматирования
 				tmp_fend=m.tmp_text
 				tmp_name=ALLTRIM(SUBSTR(m.tmp_name,AT(":",m.tmp_name)+1))	&& отсекаем ф-ю
 			CASE LEFT(m.tmp_text,4)=="FUN="		&& пользовательская функция отображения данных
@@ -1819,6 +1822,21 @@ PRIVATE f_body,l_body
 			REPLACE beetw_text WITH SUBSTR(beetw_text,2)
 		ENDCASE
 	ENDSCAN
+*--------------------------------------------------------------------------------------------
+* Проверяем, не нужно ли изменить тип значения для ячеек, имеющих признач числа
+*--------------------------------------------------------------------------------------------
+	IF "[EXCEL]"$UPPER(m.rep_config)
+		SELECT RECNO() as izmnow FROM _rtfreport WHERE "NUM"$func_end INTO CURSOR _tmpreport READWRITE
+		REPLACE ALL izmnow WITH izmnow-1
+		SELECT _tmpreport
+		SCAN
+			GO _tmpreport.izmnow IN _rtfreport
+			IF 'Type="String"'$_rtfreport.beetw_text
+				REPLACE beetw_text WITH STRTRAN(_rtfreport.beetw_text,'Type="String"','Type="Number"',OCCURS('Type="String"',_rtfreport.beetw_text)) IN _rtfreport
+			ENDIF
+		ENDSCAN
+		USE IN _tmpreport
+	ENDIF
 *--------------------------------------------------------------------------------------------
 * Тотальная перекодировка файла
 *--------------------------------------------------------------------------------------------
@@ -2882,8 +2900,9 @@ LOCAL all_txt, tek_str, tmp_shabl, tmp_othet, form_ret, row_skip
 		form_ret=-1
 	ENDIF
 	IF form_ret=1
-*		=STRTOFILE(m.ret_txt,'c:\tascold\1.xml')	&& для тестирования
+*		=STRTOFILE(m.ret_txt,'c:\tascold\1.xml')				&& для тестирования
 		rep_errs=RTF_REPORT(m.tmp_shabl, m.tmp_othet, STRTRAN(m.rep_config,"[SHOW]","")+"[ENCODE=9][EXCEL]")	&& формирование файла с данными
+*		=STRTOFILE(FILETOSTR(m.tmp_othet),'c:\tascold\2.xml')	&& для тестирования
 		IF !EMPTY(rep_errs)	
 			form_ret=-1
 		ENDIF
