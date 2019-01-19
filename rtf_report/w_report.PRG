@@ -2304,14 +2304,14 @@ FUNCTION ENCODE_SYMBOLS	&& замена русских букв на HEX-коды
 LPARAMETERS rus_text
 LOCAL i,kus_text,out_hex
 	out_hex=''
-	FOR i=1 TO LEN(m.rus_text)
-		kus_text=SUBSTR(m.rus_text, m.i, 1)
-		IF ASC(m.kus_text)<127
-			out_hex=m.out_hex+m.kus_text
-		ELSE
-			out_hex=m.out_hex+ LOWER("\'"+RIGHT(TRANSFORM(ASC(m.kus_text),'@0'),2))
-		ENDIF
-	ENDFOR
+Set Textmerge On
+Set Textmerge To Memvar out_hex Additive Noshow
+For I=1 To Len(m.rus_text)
+  kus_text=Substr(m.rus_text, m.I, 1)
+    \<<Iif(ASC(m.kus_text)<127, m.kus_text, LOWER("\'"+RIGHT(TRANSFORM(ASC(m.kus_text),'@0'),2)))>>
+Next
+Set Textmerge Off
+Set Textmerge To
 RETURN m.out_hex
 *############################################################################################
 *############################################################################################
