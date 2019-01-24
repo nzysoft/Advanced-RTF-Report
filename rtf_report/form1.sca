@@ -243,75 +243,82 @@ DEFINE CLASS form1 AS form
 		*< END OBJECT: BaseClass="textbox" />
 	
 	PROCEDURE Init
-		SET ECHO OFF
-		SET TALK OFF
-		SET DEFAULT TO (JUSTPATH(SUBSTR(SYS(16),AT(" ",SYS(16),2))))
-		SET PROCEDURE TO userfunc ADDITIVE	&& это внешний процедурный файл
-		IF !USED("reg")
-			USE reg IN 0 ALIAS reg
-		ENDIF
-		IF !USED("ter")
-			USE ter IN 0 ALIAS ter
-		ENDIF
-		SET PROCEDURE TO w_report ADDITIVE
+		Set Echo Off
+		Set Talk Off
+		Set Default To (Justpath(Substr(Sys(16),At(" ",Sys(16),2))))
+		Set Procedure To userfunc Additive	&& это внешний процедурный файл
+		If !Used("reg")
+		  Use reg In 0 Alias reg
+		Endif
+		If !Used("ter")
+		  Use ter In 0 Alias ter
+		Endif
+		Set Procedure To w_report Additive
+		
 	ENDPROC
 
 	PROCEDURE run_othet
-		LPARAMETERS rep_nomer
-		rep_time=SECONDS()
-		this.LockScreen= .T.
-		DO CASE
-		CASE ThisForm.Optiongroup1.Value=1
-			DO CASE
-			CASE m.rep_nomer=11
-				ret_error=SPLIT_REPORT('test11.rtf', 'out11_%.rtf', '[SPLIT=50][SHOW]',"REG")
-			OTHERWISE
-				ret_error=RTF_REPORT('test'+ALLTRIM(STR(m.rep_nomer))+'.rtf', 'out'+ALLTRIM(STR(m.rep_nomer))+'.rtf', '[SHOW][FORMAT]')
-			ENDCASE
-		CASE ThisForm.Optiongroup1.Value=2
-			ret_error=XLS_REPORT('test'+ALLTRIM(STR(m.rep_nomer))+'.xml','out'+ALLTRIM(STR(m.rep_nomer))+'.xlsx','[SHOW]')
-		OTHERWISE
-			ret_error=RTF_REPORT('test'+ALLTRIM(STR(m.rep_nomer))+'.txt', 'out'+ALLTRIM(STR(m.rep_nomer))+'.htm', '[SHOW]')
-		ENDCASE
-		this.LockScreen= .F.
-		rep_time=SECONDS()-m.rep_time
-		ThisForm.Text1.Value="Время выполнения: "+STR(INT(rep_time/60),3)+":"+CHRTRAN(STR(MOD(rep_time,60),2)," ","0")+" сек."
-		IF !EMPTY(m.ret_error)
-			=MESSAGEBOX(m.ret_error,16,"Ошибка")
-		ENDIF
+		Lparameters rep_nomer
+		rep_time=Seconds()
+		With This
+		  .LockScreen= .T.
+		  Do Case
+		  Case .Optiongroup1.Value=1
+		    Do Case
+		    Case m.rep_nomer=11
+		      ret_error=SPLIT_REPORT('test11.rtf', 'out11_%.rtf', '[SPLIT=50][SHOW]',"REG")
+		    Otherwise
+		      ret_error=RTF_REPORT('test'+Ltrim(Str(m.rep_nomer))+'.rtf', 'out'+Ltrim(Str(m.rep_nomer))+'.rtf', '[SHOW][FORMAT]')
+		    Endcase
+		  Case .Optiongroup1.Value=2
+		    ret_error=XLS_REPORT('test'+Ltrim(Str(m.rep_nomer))+'.xml','out'+Ltrim(Str(m.rep_nomer))+'.xlsx','[SHOW]')
+		  Otherwise
+		    ret_error=RTF_REPORT('test'+Ltrim(Str(m.rep_nomer))+'.txt', 'out'+Ltrim(Str(m.rep_nomer))+'.htm', '[SHOW]')
+		  Endcase
+		  .LockScreen= .F.
+		  rep_time=Seconds()-m.rep_time
+		  .Text1.Value="Время выполнения: "+Str(Int(rep_time/60),3)+":"+Chrtran(Str(Mod(rep_time,60),2)," ","0")+" сек."
+		  If !Empty(m.ret_error)
+		    =Messagebox(m.ret_error,16,"Ошибка")
+		  Endif
+		Endwith
 		
 	ENDPROC
 
 	PROCEDURE run_shabl
-		LPARAMETERS rep_nomer
-		DO CASE
-		CASE ThisForm.Optiongroup1.Value=1
-			rep_file='test'+ALLTRIM(STR(m.rep_nomer))+'.rtf'
-			WSHShell=CreateObject("WScript.Shell",0,.F.)  
-			WSHShell.Run(m.rep_file)
-		CASE ThisForm.Optiongroup1.Value=2
-			rep_file=SYS(5)+CURDIR()+'test'+ALLTRIM(STR(m.rep_nomer))+'.xml'
-			oExcel= CREATEOBJECT("Excel.Application")
-			IF TYPE("oExcel")#"O"
-				ThisForm.Text1.Value='Не установлен Excel! Шаблон не может быть открыт!'
-			ELSE
-				oExcel.DisplayAlerts = .F.
-				oExcel.Workbooks.OpenXML(m.rep_file,,2)
-				oExcel.Visible=.T.
-			ENDIF
-		OTHERWISE
-			rep_file='test'+ALLTRIM(STR(m.rep_nomer))+'.txt'
-			WSHShell=CreateObject("WScript.Shell",0,.F.)  
-			WSHShell.Run(m.rep_file)
-		ENDCASE
+		Lparameters rep_nomer
+		With This
+		  Do Case
+		  Case .Optiongroup1.Value=1
+		    rep_file='test'+Ltrim(Str(m.rep_nomer))+'.rtf'
+		    WSHShell=Createobject("WScript.Shell",0,.F.)
+		    WSHShell.Run(m.rep_file)
+		  Case .Optiongroup1.Value=2
+		    rep_file=Sys(5)+Curdir()+'test'+Ltrim(Str(m.rep_nomer))+'.xml'
+		    oExcel= Createobject("Excel.Application")
+		    If Type("oExcel")#"O"
+		      .Text1.Value='Не установлен Excel! Шаблон не может быть открыт!'
+		    Else
+		      oExcel.DisplayAlerts = .F.
+		      oExcel.Workbooks.OpenXML(m.rep_file,,2)
+		      oExcel.Visible=.T.
+		    Endif
+		  Otherwise
+		    rep_file='test'+Ltrim(Str(m.rep_nomer))+'.txt'
+		    WSHShell=Createobject("WScript.Shell",0,.F.)
+		    WSHShell.Run(m.rep_file)
+		  Endcase
+		Endwith
+		
 	ENDPROC
 
 	PROCEDURE Command1.Click
-		rep_file='rtfreport.doc'
-		IF FILE(m.rep_file)
-			WSHShell=CreateObject("WScript.Shell",0,.F.)  
-			WSHShell.Run(m.rep_file)
-		ENDIF
+		rep_file='..\rtfreport.doc'
+		If File(m.rep_file)
+		  WSHShell=Createobject("WScript.Shell",0,.F.)
+		  WSHShell.Run(m.rep_file)
+		Endif
+		
 	ENDPROC
 
 	PROCEDURE Commandgroup1.Command1.Click
@@ -404,45 +411,17 @@ DEFINE CLASS form1 AS form
 	ENDPROC
 
 	PROCEDURE Optiongroup1.When
-		LOCAL i
-		DO CASE
-		CASE This.Value=1
-			FOR i=1 TO 11
-				WITH EVALUATE("ThisForm.Commandgroup1.Command"+ALLTRIM(STR(m.i)))
-					.Enabled= .T.
-				ENDWITH
-				WITH EVALUATE("ThisForm.Commandgroup2.Command"+ALLTRIM(STR(m.i)))
-					.Enabled= .T.
-				ENDWITH
-			ENDFOR
-		CASE This.Value=2
-			FOR i=1 TO 11
-				IF INLIST(m.i,7,8,11)
-					WITH EVALUATE("ThisForm.Commandgroup1.Command"+ALLTRIM(STR(m.i)))
-						.Enabled= .F.
-					ENDWITH
-					WITH EVALUATE("ThisForm.Commandgroup2.Command"+ALLTRIM(STR(m.i)))
-						.Enabled= .F.
-					ENDWITH
-				ELSE
-					WITH EVALUATE("ThisForm.Commandgroup1.Command"+ALLTRIM(STR(m.i)))
-						.Enabled= .T.
-					ENDWITH
-					WITH EVALUATE("ThisForm.Commandgroup2.Command"+ALLTRIM(STR(m.i)))
-						.Enabled= .T.
-					ENDWITH
-				ENDIF
-			ENDFOR
-		OTHERWISE
-			FOR i=2 TO 11
-				WITH EVALUATE("ThisForm.Commandgroup1.Command"+ALLTRIM(STR(m.i)))
-					.Enabled= .F.
-				ENDWITH
-				WITH EVALUATE("ThisForm.Commandgroup2.Command"+ALLTRIM(STR(m.i)))
-					.Enabled= .F.
-				ENDWITH
-			ENDFOR
-		ENDCASE
+		Local i
+		
+		For Each loCG As CommandGroup In Thisform.Controls FoxObject
+		  If loCG.BaseClass = 'Commandgroup'
+		    With loCG
+		      For i = 1 To .ButtonCount
+		        .Buttons[i].Enabled = (This.Value=1) Or (This.Value=2 And Not Inlist(m.i,7,8,11)) Or (This.Value > 2 And i = 1)
+		      Next
+		    Endwith
+		  Endif
+		Next
 		
 	ENDPROC
 
