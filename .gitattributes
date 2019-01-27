@@ -68,3 +68,6 @@
 *.??[Aa]		text working-tree-encoding=cp1251
 *.[Pp][Jj][Mm]		text working-tree-encoding=cp1251
 *.[Mm][Dd]		text working-tree-encoding=utf-8
+
+*.[Dd][Oo][Cc][Xx}	diff=word 
+*.[Rr][Tt][Ff]	diff=word 
