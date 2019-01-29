@@ -1,6 +1,6 @@
-FUNCTION USERF && какая-то внешняя функция
-LPARAMETERS znh_now
-IF VARTYPE(m.znh_now)="N"
-	znh_now=ALLTRIM(PADR(znh_now,20))
-ENDIF
-RETURN CHRTRAN(m.znh_now," ","-")
+Function USERF && РєР°РєР°СЏ-С‚Рѕ РІРЅРµС€РЅСЏСЏ С„СѓРЅРєС†РёСЏ
+Lparameters znh_now
+If Vartype(m.znh_now)="N"
+  znh_now=Alltrim(Padr(znh_now,20))
+Endif
+Return Chrtran(m.znh_now," ","-")
