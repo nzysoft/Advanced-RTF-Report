@@ -36,6 +36,16 @@
    <NumberFormat/>
    <Protection/>
   </Style>
+  <Style ss:ID="m310899492">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
+  </Style>
   <Style ss:ID="s63">
    <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss"/>
@@ -44,25 +54,12 @@
    <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss"/>
   </Style>
-  <Style ss:ID="s68">
-   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss"/>
-  </Style>
-  <Style ss:ID="s74">
-   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
-   <Borders/>
-   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
-  </Style>
-  <Style ss:ID="s77">
-   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
-  </Style>
-  <Style ss:ID="s78">
+  <Style ss:ID="s67">
    <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Size="14"
     ss:Bold="1"/>
   </Style>
-  <Style ss:ID="s79">
+  <Style ss:ID="s69">
    <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
    <Borders>
     <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -72,17 +69,7 @@
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
    <Interior ss:Color="#D9D9D9" ss:Pattern="Solid"/>
   </Style>
-  <Style ss:ID="s88">
-   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
-   <Borders>
-    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
-    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
-    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
-    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
-   </Borders>
-   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
-  </Style>
-  <Style ss:ID="s90">
+  <Style ss:ID="s76">
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
     <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -92,16 +79,46 @@
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss"/>
    <Interior/>
   </Style>
-  <Style ss:ID="s91">
+  <Style ss:ID="s80">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s82">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s83">
+   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s84">
+   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss"/>
+   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s85">
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
     <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
     <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
     <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
    </Borders>
+   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
   </Style>
-  <Style ss:ID="s92">
+  <Style ss:ID="s86">
    <Borders/>
+   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s87">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
+   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
   </Style>
  </Styles>
  <Worksheet ss:Name="Data">
@@ -109,81 +126,86 @@
    <NamedRange ss:Name="_FilterDatabase"
     ss:RefersTo="='\TASCOLD\FOXPRO\XSDDOC\[recorddata]recorddata'!R1C1:R3C7"
     ss:Hidden="1"/>
-   <NamedRange ss:Name="Print_Area" ss:RefersTo="=Data!C2:C3"/>
+   <NamedRange ss:Name="Print_Area" ss:RefersTo="=Data!C1:C2"/>
   </Names>
-  <Table ss:ExpandedColumnCount="3" ss:ExpandedRowCount="17" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="2" ss:ExpandedRowCount="17" x:FullColumns="1"
    x:FullRows="1" ss:DefaultRowHeight="13.2">
-   <Column ss:Width="152.4"/>
    <Column ss:AutoFitWidth="0" ss:Width="47.4"/>
    <Column ss:AutoFitWidth="0" ss:Width="469.2"/>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">[REP:START]</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">[REP:START]</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s83"><NamedCell ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="2" ss:MergeAcross="1" ss:StyleID="s63"><Data ss:Type="String">В этом отчете показана работа с группировкой.</Data><NamedCell
+    <Cell ss:MergeAcross="1" ss:StyleID="s63"><Data ss:Type="String">В этом отчете показана работа с группировкой.</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="2" ss:MergeAcross="1" ss:StyleID="s65"><Data ss:Type="String">Дата печати: [DATE()]</Data><NamedCell
+    <Cell ss:MergeAcross="1" ss:StyleID="s65"><Data ss:Type="String">Дата печати: [DATE()]</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="57.6">
-    <Cell ss:Index="2" ss:MergeAcross="1" ss:StyleID="s78"><Data ss:Type="String">Список территорий с разбивкой по субъектам РФ&#10;на [DAT:date()]</Data><NamedCell
+   <Row ss:AutoFitHeight="0" ss:Height="57.45">
+    <Cell ss:MergeAcross="1" ss:StyleID="s67"><Data ss:Type="String">Список территорий с разбивкой по субъектам РФ&#10;на [DAT:date()]</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:Index="6" ss:AutoFitHeight="0">
-    <Cell ss:StyleID="s68"><Data ss:Type="String">[REP:ALI=TER]</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">[REP:ALI=TER]</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s83"><NamedCell ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="55.800000000000004">
-    <Cell ss:Index="2" ss:StyleID="s79"><Data ss:Type="String">Код</Data><NamedCell
+    <Cell ss:StyleID="s69"><Data ss:Type="String">Код</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s79"><Data ss:Type="String">Наименование</Data><NamedCell
-      ss:Name="Print_Area"/></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">[REP:GRP=srf_id]</Data></Cell>
-    <Cell ss:StyleID="s88"><NamedCell ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s88"><NamedCell ss:Name="Print_Area"/></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="2" ss:MergeAcross="1" ss:StyleID="s88"><Data ss:Type="String">Субъект РФ: [srf_id]</Data><NamedCell
+    <Cell ss:StyleID="s69"><Data ss:Type="String">Наименование</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">[REP:DETAIL]</Data></Cell>
-    <Cell ss:StyleID="s88"><NamedCell ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s88"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">[REP:GRP=srf_id]</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s87"><NamedCell ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="2" ss:StyleID="s90"><Data ss:Type="String">[ter_id]</Data><NamedCell
-      ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s90"><Data ss:Type="String">[ter_name]</Data><NamedCell
+    <Cell ss:MergeAcross="1" ss:StyleID="m310899492"><Data ss:Type="String">Субъект РФ: [srf_id]</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:StyleID="s68"><Data ss:Type="String">[REP:ENDDETAIL]</Data></Cell>
-    <Cell ss:StyleID="s91"><NamedCell ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s91"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">[REP:DETAIL]</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s87"><NamedCell ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:StyleID="s68"><Data ss:Type="String">[REP:ENDGROUP]</Data></Cell>
-    <Cell ss:StyleID="s92"><NamedCell ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s92"><NamedCell ss:Name="Print_Area"/></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="2" ss:MergeAcross="1" ss:StyleID="s74"><NamedCell
+    <Cell ss:StyleID="s76"><Data ss:Type="String">[ter_id]</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">[ter_name]</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:StyleID="s68"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="s77"><Data ss:Type="String">Итого [tbl_kol] субъектов и [tbl_all] территорий</Data><NamedCell
+    <Cell ss:StyleID="s84"><Data ss:Type="String">[REP:ENDDETAIL]</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s85"><NamedCell ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s84"><Data ss:Type="String">[REP:ENDGROUP]</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s86"><NamedCell ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:MergeAcross="1" ss:StyleID="s80"><NamedCell ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:MergeAcross="1" ss:StyleID="s82"><Data ss:Type="String">Итого [tbl_kol] субъектов и [tbl_all] территорий</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">[REP:ENDALIAS]</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">[REP:ENDALIAS]</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s83"><NamedCell ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">[REP:FINAL]</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">[REP:FINAL]</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s83"><NamedCell ss:Name="Print_Area"/></Cell>
    </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
@@ -207,8 +229,8 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>6</ActiveRow>
-     <ActiveCol>2</ActiveCol>
+     <ActiveRow>4</ActiveRow>
+     <ActiveCol>1</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

@@ -36,7 +36,7 @@ DEFINE CLASS form1 AS form
 	BorderStyle = 1
 	Caption = "Примеры использования RTF report"
 	DoCreate = .T.
-	Height = 440
+	Height = 480
 	MaxButton = .F.
 	MinButton = .F.
 	Name = "FORM1"
@@ -47,13 +47,13 @@ DEFINE CLASS form1 AS form
 		Height = 23, ;
 		Left = 372, ;
 		Name = "Command1", ;
-		Top = 411, ;
+		Top = 447, ;
 		Width = 108
 		*< END OBJECT: BaseClass="commandbutton" />
 
 	ADD OBJECT 'Commandgroup1' AS commandgroup WITH ;
-		ButtonCount = 11, ;
-		Height = 333, ;
+		ButtonCount = 12, ;
+		Height = 368, ;
 		Left = 12, ;
 		Name = "Commandgroup1", ;
 		Top = 64, ;
@@ -124,12 +124,18 @@ DEFINE CLASS form1 AS form
 		Command11.Left = 5, ;
 		Command11.Name = "Command11", ;
 		Command11.Top = 295, ;
-		Command11.Width = 337
+		Command11.Width = 337, ;
+		Command12.Caption = "Графики в отчете (нужен EXCEL)", ;
+		Command12.Height = 27, ;
+		Command12.Left = 5, ;
+		Command12.Name = "Command12", ;
+		Command12.Top = 324, ;
+		Command12.Width = 337
 		*< END OBJECT: BaseClass="commandgroup" />
 
 	ADD OBJECT 'Commandgroup2' AS commandgroup WITH ;
-		ButtonCount = 11, ;
-		Height = 333, ;
+		ButtonCount = 12, ;
+		Height = 368, ;
 		Left = 372, ;
 		Name = "Commandgroup2", ;
 		Top = 64, ;
@@ -200,7 +206,13 @@ DEFINE CLASS form1 AS form
 		Command11.Left = 5, ;
 		Command11.Name = "Command11", ;
 		Command11.Top = 295, ;
-		Command11.Width = 97
+		Command11.Width = 97, ;
+		Command12.Caption = "Шаблон", ;
+		Command12.Height = 27, ;
+		Command12.Left = 5, ;
+		Command12.Name = "Command12", ;
+		Command12.Top = 324, ;
+		Command12.Width = 97
 		*< END OBJECT: BaseClass="commandgroup" />
 
 	ADD OBJECT 'Optiongroup1' AS optiongroup WITH ;
@@ -238,7 +250,7 @@ DEFINE CLASS form1 AS form
 		Height = 23, ;
 		Left = 12, ;
 		Name = "Text1", ;
-		Top = 411, ;
+		Top = 447, ;
 		Width = 348
 		*< END OBJECT: BaseClass="textbox" />
 	
@@ -271,7 +283,7 @@ DEFINE CLASS form1 AS form
 		      ret_error=RTF_REPORT('test'+Ltrim(Str(m.rep_nomer))+'.rtf', 'out'+Ltrim(Str(m.rep_nomer))+'.rtf', '[SHOW][FORMAT]')
 		    Endcase
 		  Case .Optiongroup1.Value=2
-		    ret_error=XLS_REPORT('test'+Ltrim(Str(m.rep_nomer))+'.xml','out'+Ltrim(Str(m.rep_nomer))+'.xlsx','[SHOW]')
+		    ret_error=XLS_REPORT('test'+Ltrim(Str(m.rep_nomer))+'.xml','out'+Ltrim(Str(m.rep_nomer))+'.xlsx','[SHOW]', 51)
 		  Otherwise
 		    ret_error=RTF_REPORT('test'+Ltrim(Str(m.rep_nomer))+'.txt', 'out'+Ltrim(Str(m.rep_nomer))+'.htm', '[SHOW]')
 		  Endcase
@@ -333,6 +345,10 @@ DEFINE CLASS form1 AS form
 		ThisForm.run_othet(11)
 	ENDPROC
 
+	PROCEDURE Commandgroup1.Command12.Click
+		ThisForm.run_othet(12)
+	ENDPROC
+
 	PROCEDURE Commandgroup1.Command2.Click
 		ThisForm.run_othet(2)
 	ENDPROC
@@ -378,6 +394,10 @@ DEFINE CLASS form1 AS form
 		ThisForm.run_shabl(11)
 	ENDPROC
 
+	PROCEDURE Commandgroup2.Command12.Click
+		ThisForm.run_shabl(12)
+	ENDPROC
+
 	PROCEDURE Commandgroup2.Command2.Click
 		ThisForm.run_shabl(2)
 	ENDPROC
@@ -417,7 +437,7 @@ DEFINE CLASS form1 AS form
 		  If loCG.BaseClass = 'Commandgroup'
 		    With loCG
 		      For i = 1 To .ButtonCount
-		        .Buttons[i].Enabled = (This.Value=1) Or (This.Value=2 And Not Inlist(m.i,7,8,11)) Or (This.Value > 2 And i = 1)
+		        .Buttons[i].Enabled = (This.Value=1) Or (This.Value=2 And Not Inlist(m.i,7,8,11,12)) Or (This.Value > 2 And i = 1)
 		      Next
 		    Endwith
 		  Endif

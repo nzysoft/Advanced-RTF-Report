@@ -36,7 +36,7 @@
    <NumberFormat/>
    <Protection/>
   </Style>
-  <Style ss:ID="m305806176">
+  <Style ss:ID="m307177928">
    <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -46,17 +46,16 @@
    </Borders>
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
   </Style>
-  <Style ss:ID="m305806196">
+  <Style ss:ID="m307177948">
    <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:WrapText="1"/>
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
     <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
     <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
-    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
    </Borders>
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
   </Style>
-  <Style ss:ID="m305808524">
+  <Style ss:ID="m307176324">
    <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -66,17 +65,16 @@
    </Borders>
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
   </Style>
-  <Style ss:ID="m305808544">
+  <Style ss:ID="m307176344">
    <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
    <Borders>
-    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
     <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
     <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
     <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
    </Borders>
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
   </Style>
-  <Style ss:ID="m305808564">
+  <Style ss:ID="m307176364">
    <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:WrapText="1"/>
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -86,23 +84,27 @@
    </Borders>
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
   </Style>
-  <Style ss:ID="s63">
+  <Style ss:ID="s62">
+   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s64">
    <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss"/>
   </Style>
-  <Style ss:ID="s65">
+  <Style ss:ID="s66">
    <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss"/>
   </Style>
-  <Style ss:ID="s67">
+  <Style ss:ID="s68">
    <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Size="14"
     ss:Bold="1"/>
   </Style>
-  <Style ss:ID="s68">
-   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss"/>
-  </Style>
   <Style ss:ID="s69">
+   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss"/>
+   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s70">
    <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -113,7 +115,7 @@
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
    <Interior ss:Color="#D9D9D9" ss:Pattern="Solid"/>
   </Style>
-  <Style ss:ID="s70">
+  <Style ss:ID="s71">
    <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -122,8 +124,9 @@
     <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
    </Borders>
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
+   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
   </Style>
-  <Style ss:ID="s77">
+  <Style ss:ID="s79">
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
     <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -133,7 +136,7 @@
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss"/>
    <Interior/>
   </Style>
-  <Style ss:ID="s78">
+  <Style ss:ID="s80">
    <Alignment ss:Horizontal="Right" ss:Vertical="Bottom" ss:WrapText="1"/>
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -145,24 +148,64 @@
    <Interior/>
    <NumberFormat ss:Format="Standard"/>
   </Style>
-  <Style ss:ID="s79">
+  <Style ss:ID="s81">
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
     <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
     <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
     <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
    </Borders>
+   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
   </Style>
-  <Style ss:ID="s80">
+  <Style ss:ID="s82">
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
     <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
     <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
     <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
    </Borders>
+   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
    <NumberFormat ss:Format="Standard"/>
   </Style>
-  <Style ss:ID="s87">
+  <Style ss:ID="s88">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
+   <NumberFormat ss:Format="Standard"/>
+  </Style>
+  <Style ss:ID="s96">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s97">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s99">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s100">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="Standard"/>
+  </Style>
+  <Style ss:ID="s107">
    <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -173,122 +216,125 @@
    <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
    <NumberFormat ss:Format="Standard"/>
   </Style>
-  <Style ss:ID="s88">
-   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:WrapText="1"/>
-   <Borders>
-    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
-    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
-    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
-    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
-   </Borders>
-   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
-  </Style>
  </Styles>
  <Worksheet ss:Name="Data">
   <Names>
    <NamedRange ss:Name="_FilterDatabase"
     ss:RefersTo="='\TASCOLD\FOXPRO\XSDDOC\[recorddata]recorddata'!R1C1:R3C7"
     ss:Hidden="1"/>
-   <NamedRange ss:Name="Print_Area" ss:RefersTo="=Data!C2:C4"/>
+   <NamedRange ss:Name="Print_Area" ss:RefersTo="=Data!C1:C3"/>
   </Names>
-  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="19" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="3" ss:ExpandedRowCount="20" x:FullColumns="1"
    x:FullRows="1" ss:DefaultRowHeight="13.2">
-   <Column ss:Width="152.4"/>
    <Column ss:AutoFitWidth="0" ss:Width="47.4"/>
    <Column ss:AutoFitWidth="0" ss:Width="411"/>
    <Column ss:AutoFitWidth="0" ss:Width="118.19999999999999"/>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">[REP:START]</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">[REP:START]</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s62"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s62"><NamedCell ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="159.44999999999999">
-    <Cell ss:Index="2" ss:MergeAcross="2" ss:StyleID="s63"><Data ss:Type="String">Еще варианты конечного преобразования данных – только для отображения в отчете!&#10;&#10; Если нужно в вашу функцию передать более одного значения, то для передачи текущего значения поля нужно пользоваться переменной m.znh_now.Если параметр только один, то задавать его не нужно – будет автоматически добавлено к имени функции концовка (m.znh_now)!&#10;&#10;ВНИМАНИЕ! Имейте ввиду, что тип переменной m.znh_now в момент запуска пользовательской функции, всегда символьный!&#10;&#10;В отчете показаны варианты изменения конечного значения с разделителем пробелом на другой разделитель (запятую и тире). Использованы подстановки для улучшения читаемости таблицы.&#10;</Data><NamedCell
+    <Cell ss:MergeAcross="2" ss:StyleID="s64"><Data ss:Type="String">Еще варианты конечного преобразования данных – только для отображения в отчете!&#10;&#10; Если нужно в вашу функцию передать более одного значения, то для передачи текущего значения поля нужно пользоваться переменной m.znh_now.Если параметр только один, то задавать его не нужно – будет автоматически добавлено к имени функции концовка (m.znh_now)!&#10;&#10;ВНИМАНИЕ! Имейте ввиду, что тип переменной m.znh_now в момент запуска пользовательской функции, всегда символьный!&#10;&#10;В отчете показаны варианты изменения конечного значения с разделителем пробелом на другой разделитель (запятую и тире). Использованы подстановки для улучшения читаемости таблицы.&#10;</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="2" ss:MergeAcross="2" ss:StyleID="s65"><Data ss:Type="String">Дата печати: [DATE()]</Data><NamedCell
+    <Cell ss:MergeAcross="2" ss:StyleID="s66"><Data ss:Type="String">Дата печати: [DATE()]</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="23.55">
-    <Cell ss:Index="2" ss:MergeAcross="2" ss:StyleID="s67"><Data ss:Type="String">Список субъектов РФ</Data><NamedCell
+    <Cell ss:MergeAcross="2" ss:StyleID="s68"><Data ss:Type="String">Список субъектов РФ</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:Index="6" ss:AutoFitHeight="0">
-    <Cell ss:StyleID="s68"><Data ss:Type="String">[REP:ALI=REG|ORD=srf_name]</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">[REP:ALI=REG|ORD=srf_name]</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s62"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s62"><NamedCell ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="55.800000000000004">
-    <Cell ss:Index="2" ss:StyleID="s69"><Data ss:Type="String">ID</Data><NamedCell
+    <Cell ss:StyleID="s70"><Data ss:Type="String">ID</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s69"><Data ss:Type="String">Наименование</Data><NamedCell
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Наименование</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s69"><Data ss:Type="String">Сумма</Data><NamedCell
-      ss:Name="Print_Area"/></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">[REP:GRP=TIP]</Data></Cell>
-    <Cell ss:MergeAcross="2" ss:StyleID="m305808524"><Data ss:Type="String">Тип региона: [ICASE(tip=0,”Города”, tip=1,”Области”, tip=2,”Республики”, tip=3,”Краи”,”АО”)]</Data><NamedCell
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Сумма</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">[REP:DETAIL]</Data></Cell>
-    <Cell ss:StyleID="s70"><NamedCell ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s70"><NamedCell ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s70"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">[REP:GRP=TIP]</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s71"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s71"><NamedCell ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="2" ss:StyleID="s77"><Data ss:Type="String">[srf_id]</Data><NamedCell
-      ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s77"><Data ss:Type="String">[srf_name]</Data><NamedCell
-      ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s78"><Data ss:Type="String">[RAZ: FUN=CHRTRAN(m.znh_now,” ”,”,”): srf_sum]</Data><NamedCell
+    <Cell ss:MergeAcross="2" ss:StyleID="m307176324"><Data ss:Type="String">Тип региона: [ICASE(tip=0,”Города”, tip=1,”Области”, tip=2,”Республики”, tip=3,”Краи”,”АО”)]</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:StyleID="s68"><Data ss:Type="String">[REP:ENDDETAIL]</Data></Cell>
-    <Cell ss:StyleID="s79"><NamedCell ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s79"><NamedCell ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s80"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">[REP:DETAIL]</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s71"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s71"><NamedCell ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="2" ss:MergeAcross="1" ss:StyleID="m305808544"><Data
-      ss:Type="String">Итого: [gr1_all] объектов по группе:</Data><NamedCell
+    <Cell ss:StyleID="s79"><Data ss:Type="String">[srf_id]</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s87"><Data ss:Type="String">[SUM: RAZ: FUN=USERF(m.znh_now): srf_sum]</Data><NamedCell
+    <Cell ss:StyleID="s79"><Data ss:Type="String">[srf_name]</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="2" ss:MergeAcross="2" ss:StyleID="m305808564"><ss:Data
-      ss:Type="String" xmlns="http://www.w3.org/TR/REC-html40"><B>Сумма прописью: </B><Font>[SUM:FUN=UPPER(m.znh_now):RUB:srf_sum]</Font></ss:Data><NamedCell
+    <Cell ss:StyleID="s80"><Data ss:Type="String">[RAZ: FUN=CHRTRAN(m.znh_now,” ”,”,”): srf_sum]</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="2" ss:StyleID="s88"><NamedCell ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s88"><NamedCell ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s88"><NamedCell ss:Name="Print_Area"/></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell ss:StyleID="s68"><Data ss:Type="String">[REP:ENDGROUP]</Data></Cell>
-    <Cell ss:StyleID="s79"><NamedCell ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s79"><NamedCell ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s80"><NamedCell ss:Name="Print_Area"/></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell ss:StyleID="s68"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="m305806176"><Data ss:Type="String">Итого: [tbl_all] объектов по таблице:</Data><NamedCell
+    <Cell ss:StyleID="s69"><Data ss:Type="String">[REP:ENDDETAIL]</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
-    <Cell ss:StyleID="s87"><Data ss:Type="String">[SUM: RAZ: srf_sum]</Data><NamedCell
+    <Cell ss:StyleID="s81"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s82"><NamedCell ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:MergeAcross="1" ss:StyleID="m307176344"><Data ss:Type="String">Итого: [gr1_all] объектов по группе:</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">[SUM: RAZ: FUN=USERF(m.znh_now): srf_sum]</Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:StyleID="s68"/>
-    <Cell ss:MergeAcross="2" ss:StyleID="m305806196"><ss:Data ss:Type="String"
+    <Cell ss:MergeAcross="2" ss:StyleID="m307176364"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><B>Сумма прописью: </B><Font>[SUM:FUN=UPPER(m.znh_now):RUB:srf_sum]</Font></ss:Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s96"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s96"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s97"><NamedCell ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s69"><Data ss:Type="String">[REP:ENDGROUP]</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s99"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s100"><NamedCell ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:MergeAcross="1" ss:StyleID="m307177928"><Data ss:Type="String">Итого: [tbl_all] объектов по таблице:</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">[SUM: RAZ: srf_sum]</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:MergeAcross="2" ss:StyleID="m307177948"><ss:Data ss:Type="String"
       xmlns="http://www.w3.org/TR/REC-html40"><B>Сумма прописью: </B><Font>[SUM:FUN=PROPER(m.znh_now):RUB:srf_sum]</Font></ss:Data><NamedCell
       ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">[REP:ENDALIAS]</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">[REP:ENDALIAS]</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s62"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s62"><NamedCell ss:Name="Print_Area"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">[REP:FINAL]</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">[REP:FINAL]</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s62"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s62"><NamedCell ss:Name="Print_Area"/></Cell>
    </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
@@ -309,6 +355,14 @@
     <VerticalResolution>600</VerticalResolution>
    </Print>
    <Selected/>
+   <TopRowVisible>6</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>10</ActiveRow>
+     <ActiveCol>2</ActiveCol>
+    </Pane>
+   </Panes>
    <ProtectObjects>False</ProtectObjects>
    <ProtectScenarios>False</ProtectScenarios>
   </WorksheetOptions>
